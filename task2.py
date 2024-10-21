@@ -7,3 +7,36 @@
 # Вывод:
 # значение:3 индексы 2 и 3
 # значение:2 индексы 4 и 5
+from random import randint as ran
+mas = []
+mas_i = [7]
+element = 0
+count = 1
+x1 = 7
+b = False
+n = int(input())
+for i in range(n):
+    x = ran(0, 5)
+    mas.append(x)
+    if x == x1:
+        if mas_i[-1] != i-1:
+            mas_i.append(i-1)
+            mas_i.pop(mas_i.index(7))
+        b = True
+        element = x
+        mas_i.append(i)
+    else:
+        if b:
+            result = ''.join(str(mas_i))
+            print(f'значение: {element}, индексы {result}')
+            b = False
+            mas_i = [7]
+        else:
+            mas_i = [7]
+    x1 = x
+print(mas)
+
+
+
+
+
