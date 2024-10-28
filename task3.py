@@ -24,7 +24,8 @@ for i in range(n):
             mas_i.append(x.index(x[j]))
             x[j] = -1
     if len(mas_i) > 1:
-        print(f'значение: {znach}, индексы: {mas_i}')
+        result = ', '.join(map(str, mas_i))
+        print(f'значение: {znach}; индексы: {result}')
     else:
         x[i] = znach
     mas_i = []
