@@ -4,3 +4,11 @@
 # Пример: ввод N = 6
 # [20, -90, 15, -34, 10, 0]
 # Вывод: [20, 15, 10, -90, -34, 0]
+from random import randint as ran
+n = int(input())
+x = []
+for i in range(n):
+    elem = ran(-100, 100)
+    x.append(elem)
+x.sort(reverse=True)
+print(x)
