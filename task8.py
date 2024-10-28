@@ -9,11 +9,10 @@ from random import randint as ran
 
 def proverka(n):
     n_ = str(n)
+    b = True
     for i in range(len(n_)-1):
         if n_[i] != n_[i+1]:
             return False
-        else:
-            b = True
     if b:
         return True
 
