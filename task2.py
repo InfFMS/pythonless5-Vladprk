@@ -27,7 +27,7 @@ for i in range(n):
         mas_i.append(i)
     else:
         if b:
-            result = ''.join(str(mas_i))
+            result = ' и '.join(map(str, mas_i))
             print(f'значение: {element}, индексы {result}')
             b = False
             mas_i = [7]
